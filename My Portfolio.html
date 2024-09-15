@@ -10,13 +10,13 @@
             background-image: url('WhatsApp Image 2024-09-10 at 15.04.34_7233b39e.jpg');
             background-size: cover;
             background-position:top;
-            background-attachment: scroll;
+            background-attachment:scroll;
             margin: 0;
             padding: 0;
             color: white;
         }
         header {
-            text-align: center;
+            text-align:justify;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
@@ -80,13 +80,37 @@
                 height: 100px;
             }
         }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+
+        /* Text styling and animation */
+        .animate-text {
+            font-size: 3em;
+            color: white;
+            border-right: 2px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0; /* Start with 0 width for typing effect */
+            animation: typing 4s steps(30, end), blink-caret 0.75s step-start infinite;
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Menu -->
+     <head>
     <nav>
         <ul>
+            <li>Abdul Ghafar</li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#biodata">Bio Data</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -94,21 +118,24 @@
             <li><a href="#certifications">Certifications</a></li>
         </ul>
     </nav>
-
-    <!-- Home Section -->
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Explore my skills, projects, and certifications</p>
-    </header>
+</head>
 
     <!-- Main Content -->
     <main>
 
+         <!-- About Me Section -->
+         <section id="home" style="height: 100% ; background-size: cover;">
+           
+            <h1>Hi Iam Abdul Ghafar</h1>
+            <p class="animate-text">Explore my skills, projects, and certifications</p>
+           
+        </section>
+
         <!-- About Me Section -->
         <section id="about">
-            <img src="IMG-20240910-WA0010.jpg" alt="Profile Image">
+            <img src="my photo3.jpg" alt="Profile Image">
             <h1>About Me</h1>
-            <p>Hello! I’m Abdul Ghafar, currently pursuing a Bachelor of Science in Computer Science (BSc CS) at Sukkur IBA University. My passion for technology and innovation drives me to explore various facets of computer science, from software development to artificial intelligence. As a dedicated and enthusiastic student, I am committed to enhancing my skills and knowledge to contribute effectively to the tech industry.</p>
+            <p style="font-family: sans-serif;">Hello! I’m Abdul Ghafar, currently pursuing a Bachelor of Science in Computer Science (BSc CS) at Sukkur IBA University. My passion for technology and innovation drives me to explore various facets of computer science, from software development to artificial intelligence. As a dedicated and enthusiastic student, I am committed to enhancing my skills and knowledge to contribute effectively to the tech industry.</p>
         </section>
 
         <!-- Bio Data Section -->
